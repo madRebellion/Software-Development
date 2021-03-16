@@ -1,0 +1,59 @@
+body{
+    background-color: black;
+}
+
+*{
+    color: cornsilk;
+}
+
+input[type="submit"], button{
+    background-color: black;
+    border: 2px solid white;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+input[type="text"], input[type="password"], input[type="email"], select, option {
+    color: black;
+}
+
+h1 {
+    color:#857a6e;
+    text-align: center;
+    letter-spacing: 3px;
+    text-decoration: underline;
+}
+
+p {
+    line-height: 1.5;    
+    letter-spacing: 1.5px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline cornsilk;
+}
+
+footer{
+    text-align: center;
+}
+
+footer>a {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* thead>tr>th {
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+} */
+
+th, td {
+    border-bottom: 1px solid white;
+    /* border-right: 1px solid white; */
+    border-left: 1px solid white;
+    text-align: center;
+}

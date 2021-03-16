@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test Form</title>
+    <link rel="stylesheet" href="E:\Software Development\styles.css">
+</head>
+
+<body>
+    <form action="">
+        <h1>Race Registration</h1>
+        <label for="first">First Name:</label>
+        <input type="text" required name="first_name" id="first">
+
+        <label for="last">Last Name:</label>
+        <input type="text" required name="last name" id="last">
+
+        <p>
+            Select a race:
+        </p>
+
+        <p>
+            <input type="radio" name="raceOption" id="5k">
+            <label for="5k">Fun Run 5k</label><br>
+            <input type="radio" name="raceOption" id="halfMar">
+            <label for="halfMar">Half Marathon</label><br>
+            <input type="radio" name="raceOption" id="Mar">
+            <label for="Mar">Full Marathon</label><br>
+        </p>
+
+        <label for="email">Email:</label>
+        <input type="email" required id="email" name="email">
+        <label for="password">Password:</label>
+        <input type="password" name="pass" id="password" required minlength="6" maxlength="20"><br>
+        <label for="age">Select age group:</label>
+        <select name="ageGroup" id="age" required>
+            <option value="minor">Under 18</option>
+            <option value="adult">18 - 30</option>
+            <option value="seniorAdult">31+</option>
+        </select><br>
+        <button>Register!</button>
+
+    </form>
+
+
+    <a href="E:\Software Development\TLoM-KeenaOfRybridge.html">Home</a>
+</body>
+
+</html>
