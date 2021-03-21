@@ -20,9 +20,9 @@ class QuizBrain:
 
     def Check_Answer(self, guess, answer):
         if guess == answer.lower():
-            print("Correct!")
+            print("Correct!\n")
             self.score += 1
-            print(f"Score: {self.score}")
+            #print(f"Score: {self.score}")
         else:
-            print(f"Wrong! The correct answer is {answer}!")
-            print(f"Final score: {self.score}")
+            print(f"Wrong! The correct answer is {answer}!\n")
+            #print(f"Final score: {self.score}")
