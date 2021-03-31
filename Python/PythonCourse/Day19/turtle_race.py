@@ -1,22 +1,16 @@
-from turtle import Turtle, Screen
+import turtle_info as game
+import random
 
-win_height = 600
-win_width = 1000
-start_line = (-(win_width/2) + 20)
-finish_line = win_width - 20
+# Window setup used to be here, cleaned up for main
+game.Window_Setup()
+# Turtle info was here, cleaned up for main
+game.Create_Turtles()
 
-win = Screen()
-win.setup(width=win_width, height=win_height)
-y = -100
+is_game_over = False
 
-colour_list = ["red", "orange", "yellow", "green", "blue", "purple"]
-turtle_list = []
-for _ in range(6):
-    turt = Turtle("turtle")
-    turt.penup()
-    turt.color(colour_list[_])
-    turtle_list.append(turt)
-    turt.goto(x=start_line, y=y)
-    y += 50
+# Main game starts here
+# while not is_game_over:
+#     pass
+# Main ends
 
-win.exitonclick()
+game.Close_Window_On_Click()
