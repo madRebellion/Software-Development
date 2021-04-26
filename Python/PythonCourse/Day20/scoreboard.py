@@ -22,6 +22,6 @@ class Scoreboard(Turtle):
         self.current_score += 1
 
     def game_over(self):
-        self.color("white")
+        self.color("red")
         self.home()
-        self.write("Game Over", False, ALIGN, FONT)
+        self.write("Game Over", False, ALIGN, ("Courier", 18, "normal"))

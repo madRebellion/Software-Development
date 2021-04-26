@@ -28,10 +28,21 @@ while is_game_on:
 
     if snake.snake_obj[0].distance(food) < 20:
         food.refresh()
+        snake.extend()
         score.update_score()
 
     if snake.snake_obj[0].xcor() > 280 or snake.snake_obj[0].xcor() < -280 or snake.snake_obj[0].ycor() > 280 or snake.snake_obj[0].xcor() < -280:
         is_game_on = False
         score.game_over()
+        time.sleep(3)
 
-my_screen.exitonclick()
+    for seg in snake.snake_obj:
+        if seg == snake.snake_obj[0]:
+            pass
+        elif snake.snake_obj[0].distance(seg) < 10:
+            is_game_on = False
+            score.game_over()
+            time.sleep(3)
+
+#
+# my_screen.exitonclick()

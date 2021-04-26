@@ -10,11 +10,7 @@ class Snake:
     def __init__(self):
         self.snake_obj = []
         for pos in STARTING_POS:
-            snake = Turtle("square")
-            snake.color("white")
-            snake.penup()
-            snake.goto(pos)
-            self.snake_obj.append(snake)
+            self.add_segment(pos)
 
     def move(self):
         for seg_num in range(len(self.snake_obj) - 1, 0, -1):
@@ -22,6 +18,16 @@ class Snake:
             new_y = self.snake_obj[seg_num - 1].ycor()
             self.snake_obj[seg_num].goto(new_x, new_y)
         self.snake_obj[0].forward(SPEED)
+
+    def add_segment(self, position):
+        snake = Turtle("square")
+        snake.color("white")
+        snake.penup()
+        snake.goto(position)
+        self.snake_obj.append(snake)
+
+    def extend(self):
+        self.add_segment(self.snake_obj[-1].position())
 
     def up(self):
         if self.snake_obj[0].heading() != 270:
