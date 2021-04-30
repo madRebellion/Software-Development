@@ -3,6 +3,10 @@ import time
 from snake import Snake
 from food import Food
 from scoreboard import Scoreboard
+import os
+
+folder = os.path.dirname(os.path.abspath(__file__))
+hs = os.path.join(folder, "hs_data.txt")
 
 my_screen = Screen()
 my_screen.setup(600, 600)
@@ -11,7 +15,7 @@ my_screen.title("Snake")
 my_screen.tracer(0)
 
 food = Food()
-score = Scoreboard()
+score = Scoreboard(hs)
 snake = Snake()
 
 my_screen.listen()
@@ -40,7 +44,7 @@ while is_game_on:
         snake.reset_game()
         if score.current_score > score.high_score:
             score.high_score = score.current_score
-            with open("data.txt", mode="w") as f:
+            with open(hs, mode="w") as f:
                 f.write(f"{score.high_score}")
         score.current_score = 0
         score.update_score()
