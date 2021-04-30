@@ -9,6 +9,9 @@ class Snake:
 
     def __init__(self):
         self.snake_obj = []
+        self.create_snake()
+
+    def create_snake(self):
         for pos in STARTING_POS:
             self.add_segment(pos)
 
@@ -25,6 +28,12 @@ class Snake:
         snake.penup()
         snake.goto(position)
         self.snake_obj.append(snake)
+
+    def reset_game(self):
+        for seg in self.snake_obj:
+            seg.goto(1000, 1000)
+        self.snake_obj.clear()
+        self.create_snake()
 
     def extend(self):
         self.add_segment(self.snake_obj[-1].position())
